@@ -1,0 +1,28 @@
+<% content_for :javascript do %>
+<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="page-header">
+        <h1>Amazon Keyword Aggregator <small></small></h1>
+      </div>
+      <form action="/" method="post">
+        <label class="form-label">Paste you key words below:</label>
+        <textarea id="kwords" name="kwords" class="form-control"
+          style="height:10em; width: 100%;"><%= params[:kwords] %></textarea>
+        <br/>
+        <button class="btn btn-lg btn-block btn-success">Do Some Magic!</button>
+      </form>
+      <br/><br/>
+      <% if @unique %>
+      <form>
+        <label class="form-label">
+          Here are your unique keywords in 1000 character or less chunks separated by commas:
+        </label>
+        <textarea id="unique" name="unique" class="form-control"
+          style="height:10em; width: 100%;"><%= @unique %></textarea>
+      </form>
+      <% end %>
+    </div>
+  </div>
+</div>
